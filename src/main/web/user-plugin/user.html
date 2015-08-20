@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/xml2json.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>    
+    <script type="text/javascript" src="user.js"></script>
+    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body ng-app="usermanagement" ng-controller="UserController" class="ng-cloak">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-left text-primary">
+				Internal User Management
+			</h3>
+		</div>
+	</div>
+	<div class="row">
+		<form class="form-horizontal" role="form">
+		<div class="col-md-4">
+				<div class="form-group">
+					 
+					<label for="inputEmail3" class="col-sm-2 control-label">
+						Username
+					</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="inputEmail3" type="username" ng-model="username">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="inputPassword3" class="col-sm-2 control-label">
+						Password
+					</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="inputPassword3" type="password" ng-model="password">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" ng-model="adminFlag" > Admin User 
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-4">
+						 
+						<button ng-click="save()" class="btn btn-default">
+							Create/Modify
+						</button>
+					</div>
+					<div class="col-sm-offset-2 col-sm-4">
+						 
+						<button ng-click="delete()" class="btn btn-default">
+							Delete
+						</button>
+					</div>
+					<h4 class="text-right text-primary">
+						{{stdout}}
+					</h4>
+				</div>
+
+		</div>
+		<div class="col-md-4">
+			<div class="list-group">
+				<button ng-click="loadRoles()" class="btn btn-default">
+							Reload Roles
+						</button>
+				 <a href="#" class="list-group-item active">Available Roles</a>
+					 <div class="list-group-item" ng-repeat="item in rolesList">
+					 <div class="checkbox">
+						<label>
+							<input class="checkbox" type="checkbox" ng-model="selRoles[item]" >{{item}}
+						</label>
+						</div>
+				 	 </div>
+			</div>
+		</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
