@@ -18,3 +18,6 @@ Copy the extension to the plugins folder of your XLD installation:
 ```
 cp ./build/libs/xld-internal-user-plugin-1.0.0.jar $XLD_HOME/plugins
 ```
+# Snapshot #
+
+![Visual](/screenshot.png)
