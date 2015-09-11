@@ -17,6 +17,7 @@
     <!-- Check src/main/python/cis.py to see what this endpoint does -->
     <endpoint path="/user" method="POST" script="restapi/user.py" />
     <endpoint path="/userdelete" method="POST" script="restapi/userdelete.py" />
+    <endpoint path="/ldapvalidate" method="POST" script="restapi/ldapvalidate.py" />
 
 </endpoints>
 

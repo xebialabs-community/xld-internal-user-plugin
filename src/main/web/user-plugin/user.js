@@ -28,10 +28,12 @@ angular
 							  success(function(data, status, headers, config) {
 					    			$scope.stdout = data.stdout;
 									$scope.response = data.entity;
+									$scope.status = status									
 							  }).
 							  error(function(data, status, headers, config) {
 							    	$scope.stdout = data.stdout;
 									$scope.response = data.entity;
+									$scope.status = status									
 							  });							
 					};
 					$scope.delete = function() {
@@ -42,10 +44,30 @@ angular
 							  success(function(data, status, headers, config) {
 					    			$scope.stdout = data.stdout;
 									$scope.response = data.entity;
+									$scope.status = status									
 							  }).
 							  error(function(data, status, headers, config) {
 							    	$scope.stdout = data.stdout;
 									$scope.response = data.entity;
+									$scope.status = status									
+							  });							
+					};
+					$scope.validate = function() {
+						var dataObj = {
+							"ldapURL" : $scope.ldapURL,
+							"managerDn" : $scope.managerDn,
+							"managerPassword" :$scope.managerPassword,
+							"userBase" :$scope.userBase,
+							"userDn" :$scope.userDn
+						};
+						$http.post('/api/extension/ldapvalidate', dataObj).
+							  success(function(data, status, headers, config) {
+					    			$scope.result = data.stdout;
+									$scope.status = status
+							  }).
+							  error(function(data, status, headers, config) {
+							    	$scope.result = data.stdout;
+									$scope.status = status
 							  });							
 					};
 					$scope.loadRoles = function() {
