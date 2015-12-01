@@ -32,3 +32,6 @@ try:
   print  "User found"
 except NameNotFoundException, e:
   print  "User not found"
+
+# http://stackoverflow.com/questions/16642448/how-to-get-all-ldap-users-with-ldaptemplate
+
