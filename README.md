@@ -11,17 +11,17 @@ This helps in management on Internal Users
 
 Build the project:
 ```
-gradle build
+gradlew clean assemble 
 ```
 
 Copy the extension to the plugins folder of your XLD installation:
 ```
-cp ./build/libs/xld-internal-user-plugin-1.0.0.jar $XLD_HOME/plugins
+cp ./build/libs/xld-internal-user-plugin-x.x.x.jar $XLD_HOME/plugins
 ```
 # Snapshot - Internal User Management Tab#
 
-![Visual](/usermgttab.png)
+![Visual](/doc-images/usermgttab.png)
 
 # Snapshot - LDAP Validation Tab#
 
-![Visual](/ldapvldtab.png)
+![Visual](/doc-images/ldapvldtab.png)
