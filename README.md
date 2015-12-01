@@ -1,5 +1,8 @@
 # Internal User Management UI Extension #
 
+[![Build Status](https://travis-ci.org/xebialabs-community/xld-internal-user-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xld-internal-user-plugin)
+
+
 This helps in management on Internal Users
 
 # Requirements #
