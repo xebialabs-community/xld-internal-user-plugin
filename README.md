@@ -14,7 +14,7 @@ This helps in management on Internal Users
 
 Build the project:
 ```
-gradlew clean assemble 
+gradlew clean build 
 ```
 
 Copy the extension to the plugins folder of your XLD installation:
