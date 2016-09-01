@@ -1,5 +1,5 @@
 from com.xebialabs.deployit.security import PermissionDeniedException
-from com.xebialabs.deployit.jcr import RuntimeRepositoryException
+from com.xebialabs.deployit.security.authentication import UserAlreadyExistsException
 from com.xebialabs.deployit.engine.api.security import User
 
 username = request.entity['username']
@@ -15,7 +15,7 @@ newUser.setPassword(password)
 try:
 	userService.create(username,newUser)
 	print "Created new user successfully !!"
-except RuntimeRepositoryException, e:
+except UserAlreadyExistsException, e:
 	print "User exists so modifying password and roles !!"
 	userService.modifyPassword(username,newUser)
 
